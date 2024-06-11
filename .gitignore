@@ -10,8 +10,37 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 
-# Eclipse m2e generated files
+# IntelliJ project files
+*.iml
+*.ipr
+*.iws
+.idea/
+.idea_modules/
+
+# VS Code project files
+.vscode/
+
+# NetBeans project files
+nb-configuration.xml
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Eclipse project files
 # Eclipse Core
 .project
+# Eclipse m2e generated files
+.settings/
+# External tool builders
+.externalToolBuilders/
+# Locally stored "Eclipse launch configurations"
+*.launch
+# CDT-specific (Eclipse C/C++ Development Tools)
+.cproject
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+# Java annotation processor (APT)
+.factorypath
+# PDT-specific (Eclipse PHP Development Tools)
+.buildpath
+

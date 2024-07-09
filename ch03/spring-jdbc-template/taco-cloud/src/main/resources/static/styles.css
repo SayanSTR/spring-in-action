@@ -1,0 +1,9 @@
+.validationError {
+    color: red;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+div {
+    margin: 10px;
+}

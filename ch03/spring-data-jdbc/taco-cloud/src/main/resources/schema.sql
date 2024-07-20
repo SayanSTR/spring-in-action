@@ -1,6 +1,6 @@
-create table if not exists Taco_Order (
+create table if not exists Taco_Cloud_Order (
     id identity,
-    delivery_Name varchar(50) not null,
+    customer_name varchar(50) not null,
     delivery_Street varchar(50) not null,
     delivery_City varchar(50) not null,
     delivery_State varchar(2) not null,
@@ -34,7 +34,7 @@ create table if not exists Ingredient (
 alter table
     Taco
 add
-    foreign key (taco_order) references Taco_Order(id);
+    foreign key (taco_order) references Taco_Cloud_Order(id);
 
 alter table
     Ingredient_Ref

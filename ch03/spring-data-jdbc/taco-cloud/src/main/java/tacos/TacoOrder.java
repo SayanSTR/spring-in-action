@@ -5,6 +5,9 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -13,15 +16,20 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Table("Taco_Cloud_Order") // custom table name (default is TacoOrder)
 public class TacoOrder implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
+
+    @Id // designates this property of the class as the identifier for the class
     private Long id;
+
     private Date placedAt;
+    @Column("customer_name") // custom column name (default is delivery_name)
     @NotBlank(message = "Delivery name is required")
-    private String deliveryName;
+    private String deliveryName; // camel case is converted to words seperated by "_" to decide column name
     @NotBlank(message = "Street is required")
-    private String deliveryStreet;
+    private String deliveryStreet; // default column name is delivery_street
     @NotBlank(message = "City is required")
     private String deliveryCity;
     @NotBlank(message = "State is required")
